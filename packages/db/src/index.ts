@@ -41,3 +41,5 @@ export const db = new Proxy({} as Database, {
     return typeof value === "function" ? value.bind(getDatabase()) : value;
   },
 });
+
+export { applyItemOperations, type ItemUploadOperation } from "./powersync";

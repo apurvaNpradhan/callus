@@ -87,6 +87,12 @@
       "skillPath": "skills/panelui/SKILL.md",
       "computedHash": "a286d8ada34c73c20bcca8422036b8a1c2d98f76e00a99023c6a0d29cdd17060"
     },
+    "powersync": {
+      "source": "powersync-ja/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/powersync/SKILL.md",
+      "computedHash": "0f3e82e906d333c4c68946ebb97687b5cc1c0f92cbc76c389fddea0480ba81be"
+    },
     "review-logging-patterns": {
       "source": "evlog.dev",
       "sourceUrl": "https://www.evlog.dev",

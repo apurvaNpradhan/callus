@@ -5,9 +5,9 @@ import { QueryCache, QueryClient } from "@tanstack/react-query";
 import { Platform } from "react-native";
 
 import type { AppRouterClient } from "@callus/api/routers/index";
-import { env } from "@callus/env/native";
 
 import { authClient } from "@/lib/auth-client";
+import { serverUrl } from "@/lib/server-url";
 
 export const queryClient = new QueryClient({
   queryCache: new QueryCache({
@@ -23,10 +23,10 @@ async function expoFetch(url: string, init?: RequestInit) {
   return fetch(url, init);
 }
 
-const serverUrl = new URL("/rpc", env.EXPO_PUBLIC_SERVER_URL);
+const rpcUrl = new URL("/rpc", serverUrl);
 
 export const link = new RPCLink({
-  origin: serverUrl.origin,
+  origin: rpcUrl.origin,
   url: "/rpc",
   fetch(url, init) {
     return expoFetch(url, {
